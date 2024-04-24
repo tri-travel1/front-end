@@ -1,0 +1,347 @@
+:root{
+    --blue: #9ab3f5;
+    --purple: #9a1663;
+    --white: #ffffff;
+    --shadow: rgba(0,0,0,0.15) 0px 5px 15px 0px00;
+    margin: 0;
+
+}
+.title-description1{
+        padding: 80px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-description1 span{
+    margin-top: 70px;
+    color: #9ab3f5;
+    font-size: 3rem;
+    display: flex;
+    text-align: center;
+
+}
+.title-description11{
+display: flex;
+font-size: 2rem;
+justify-content: center;
+align-items: center;
+
+}
+.country{
+    padding: 30px;
+    display: flex;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: "Poppins",sans-serif;
+}
+#date{
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 50px;
+}
+body{
+    
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    color: black;
+    background-color: white;
+}
+.all{
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 300px;
+    height: 100px;
+    border-radius: 50px;
+    
+ 
+    background-color: var(--white);
+}
+.title-description1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown {
+    position: relative;
+  
+    width: 280px;
+    height: 40px;
+    border-radius: 50px;
+    border: 50% var(--white);
+    background-color: var(--purple);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.dropdown-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    padding: 1rem 1.5rem;
+}
+
+.dropdown-list {
+    position:absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: var(--white);
+    transition: max-height 0.5s;
+}
+
+#list.show {
+    max-height: 300px;
+}
+.dropdown-list-item {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 1rem 0 1rem 1.5rem;
+    cursor: pointer;
+    transition: margin-left 0.2s ease-in-out , color 0.2s ease-in-out;
+}
+
+.dropdown-list-item:hover{
+    margin-left: 0.5rem;
+    color: var(--purple);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.search-box input {
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--purple);
+    border: 0px;
+    outline: 0;
+}
+
+.search-box i {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.search-box input::placeholder{
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: white;
+   
+    color: var(--purple);
+}
+#search-input{
+    background:none;
+}
+.card-group{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+    color: white;
+    
+}
+.card{
+    width: 205px;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.card .layer{
+    background: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%;
+    opacity: 0;
+    transition: 0.3s;
+}
+.card .info{
+    position: absolute;
+    bottom: -50%;
+    padding: 15px;
+    opacity: 0;
+    transition: 0.5s bottom,1.7s opacity;
+}
+.info p{
+    font-size: 14px;
+    margin-top: 3px;
+    color: white;
+}
+.info button{
+    background: #490ccc;
+    border: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+.card:hover,
+.card:hover img,
+.card:hover layer{
+    transform:scale(1.1) ;
+
+}
+.card:hover > .layer{
+    opacity: 1;
+}
+.card:hover > .info{
+    bottom: 0;
+    opacity: 1;
+}
+.card-group:hover > .card:not(:hover){
+    filter:blur(5px)
+}
+.place-title{
+    margin-top: 30px;
+    display: flex;
+    text-align: center;
+    padding: 30px;
+
+}
+.momcard{
+    color: rgb(19, 44, 44);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    }
+    .hotel{
+        margin-top: 0px;
+    }
+  
+  
+    .hotel-1 h2{
+        padding-left: 30px;
+        padding-top: 30px;
+        display: flex;
+        font-size: 2rem;
+        color: black;
+
+    }
+    fieldset{background-color: #304663;
+/**https://github.com/tri-travel1/front-end.git*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        height: 500px;
+    }
+
+    .card1 {
+        width: 240px;
+        gap: 50px;
+        height: 240px;
+        border: none;
+        background-color: #304663;
+       flex: 0 0 auto;
+       margin-top: 4em;
+       overflow-x: none;
+       border-radius: 10px;
+    }
+    #btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -45px;
+      margin-left: 70px;
+     
+      
+    
+      width: 80px;
+      height: 10px;
+      margin-left: 80px;
+     
+    
+    }
+    #btn a{
+      text-decoration: none;
+      color: #000;
+    }
+    .hoverthingi{
+        height: 100px;
+        width: 240px;
+        background-color:blue;
+        
+       
+        margin-top: 9rem;
+       border-radius: 10px;
+  
+    }
+    .hoverthingi p{
+      color: #fff;
+    }
+    
+    
+    #div1{
+       background-image: url(images/pass.jpg);
+       background-position: center;
+       background-size: cover;
+    }
+    #div2{
+        background-image: url(images/car.jpg);
+        background-position: center;
+       background-size: cover;
+    }
+    #div3{
+        background-image: url(images/hotel.jpg);
+        background-position: center;
+        background-size: cover;
+    }  
+    #div4{
+        background-image: url(images/tour.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .cerdtxt{
+        display: flex;
+        justify-content:  center;
+        text-align: center;
+        color: black;
+        font-weight: 600;
+    }
