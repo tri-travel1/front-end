@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+
 :root{
     --blue: #9ab3f5;
     --purple: #9a1663;
@@ -63,7 +68,10 @@ body{
     height: 70vh;
     display: flexs;
     color: whitesmoke;
+    font-family: "Expletus Sans", sans-serif;
+
     background-color: black;
+    
 }
 .all{
     padding: 40px;
@@ -591,3 +599,4 @@ color: #000;
         display: flex;
         gap: 20px;
       }
+      

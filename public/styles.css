@@ -331,7 +331,7 @@ object-fit: contain;
    .img-box1{
     background-image: url(images/pass.jpg);
     width: 200px;
-    border-radius: 70%;
+    
     height: 200px;
     background-size: cover;
     background-position: center;
