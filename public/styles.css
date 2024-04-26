@@ -331,6 +331,7 @@ object-fit: contain;
    .img-box1{
     background-image: url(images/pass.jpg);
     width: 200px;
+    border-radius: 70%;
     height: 200px;
     background-size: cover;
     background-position: center;
@@ -383,7 +384,7 @@ object-fit: contain;
 
    }
    .service{
-    background-color: black;
+    background-color: #111;
     color: wheat;
     padding-bottom: 50px;
    }
@@ -538,7 +539,7 @@ height: 200px;
   }
  
   footer{
-    background-color: #1A4D2E;
+    background-color: #514128;
     padding-top: 30px;
     padding-bottom: 30px;
 
@@ -547,7 +548,7 @@ height: 200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    background-color: #1A4D2E;
+    background-color: #514128;
     color: #fff;
     align-items: center;
     padding-left: 70px;
