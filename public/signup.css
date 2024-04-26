@@ -1,8 +1,10 @@
 body{
     justify-content: center;
     align-items: center;
-    background-image:url(images/imagesimg-1\ \(8\).jpg);
+    background-image:url(images/ethiofinal.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat:repeat-x;
 
 }
 
@@ -55,17 +57,19 @@ body{
     width: 16px;
     border-radius: 50%;
     left: 0px;
-    background-color: orangered;
+    background-color: black;
   }
   
   .message, 
   .signin {
-    font-size: 14.5px;
+    font-size: 15.5px;
     color:black;
+    font-weight: 1000;
   }
   
   .signin {
     text-align: center;
+
   }
   
   .signin a:hover {
