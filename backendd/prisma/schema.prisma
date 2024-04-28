@@ -13,70 +13,71 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
-
-
-
 model Customer {
-  id        Int      @id @default(autoincrement())
-  name      String   @unique
-  email     String   @unique
-  password String
+  id           Int       @id @default(autoincrement())
+  name         String    @unique
+  email        String    @unique
+  password     String
   phone_number String
+  Booking      Booking[]
 }
 
 model Car {
-  id          Int      @id @default(autoincrement())
+  id          Int     @id @default(autoincrement())
   name        String
   type        String
   capacity    Int
-  daily_price Decimal  @default(0.00)
-  image_url   String   @optional
+  daily_price Decimal @default(0.00)
+  image_url   String
+
+  Booking Booking[]
 }
 
 model Hotel {
-  id            Int      @id @default(autoincrement())
+  id            Int       @id @default(autoincrement())
   name          String
   star_rating   Int
-  location     String
-  nightly_price Decimal  @default(0.00)
-  image_url     String   @optional
+  location      String
+  nightly_price Decimal   @default(0.00)
+  image_url     String
+  Booking       Booking[]
 }
 
 model TourGuide {
-  id          Int      @id @default(autoincrement())
-  name        String
-  languages   String
-  specialties String
-  daily_rate  Decimal  @default(0.00)
+  id           Int       @id @default(autoincrement())
+  name         String
+  languages    String
+  specialties  String
+  daily_rate   Decimal   @default(0.00)
   availability Boolean
-  image_url   String   @optional
+  image_url    String
+  Booking      Booking[]
 }
 
-model Site { // Optional, based on your needs
-  id          Int      @id @default(autoincrement())
-  name        String
-  country     String
-  image_url   String   @optional
+model Site {
+  id        Int    @id @default(autoincrement())
+  name      String
+  country   String
+  image_url String
 }
 
 model Booking {
-  id          Int      @id @default(autoincrement())
+  id          Int       @id @default(autoincrement())
   customer    Customer  @relation(fields: [customerId], references: [id])
   customerId  Int
-  car         Car?      @relation(fields: [carId], references: [id])
-  CarId      Int       @relation
-  hotel       Hotel     @relation(fields: [hotelId], references: [id])
-  hotelId     Int
-  tourGuide   TourGuide? @relation(fields: [tourGuideId], references: [id])
-  tourGuideId? Int       @optional
+  car         Car       @relation(fields: [Carid], references: [id])
+  Carid       Int       @unique
+  hotel       Hotel     @relation(fields: [hotelid], references: [id])
+  hotelid     Int       @unique
+  TourGuide   TourGuide @relation(fields: [TourGuideid], references: [id])
+  TourGuideid Int       @unique
   country     String
   city        String
   destination String
-  num_rooms    Int
-  adults       Int
-  children     Int
+  num_rooms   Int
+  adults      Int
+  children    Int
   start_date  DateTime
   end_date    DateTime
-  total_price Decimal  @default(0.00)
+  total_price Decimal   @default(0.00)
 }
