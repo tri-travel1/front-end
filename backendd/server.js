@@ -1,21 +1,30 @@
-const express= require('express')
-const path= require('path')
-const app =express();
-const port =8008;
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
 
-app.set('views','views')
-app.set('view engine', 'ejs');
+const customerRoutes = require('./routes/customer');
+const carRoutes = require('./routes/cars');
+const hotelRoute = require('./routes/cars');
+const tourGuideroute = require('./routes/tourguide')
 
-app.use(express.urlencoded({extended:true}))
-app.use(express.static(path.join(__dirname, 'public')));
+const prisma = new PrismaClient();
 
+const port =1000
+// Enable body parsing
 
-
-app.use(express.json())
-
-
-
+app.use(bodyParser.json());
 
 
 
-app.listen(port, ()=>{console.log(`app listining on ${port}`)})
+
+
+
+
+// Mount routers
+app.use('/customer', customerRoutes);
+app.use('/cars', carRoutes);
+app.use('/hotels',hotelRoute);
+app.use('/tourguide',tourGuideroute);
+
+
+app.listen(port,()=>{console.log(`server running on port ${port}`);})
