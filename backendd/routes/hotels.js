@@ -1,11 +1,10 @@
-const express =require('express');
+const express = require('express');
 const router = express.Router();
 
-const{prismaClient} = require('@prisma/client');
-const prisma = new prismaClient();
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
-router.use(bodyParser.json());
-
+router.use(express.json()); 
 router.post('/hostels',async(req,res)=>{
   try {
     const hotelData = req.body;
@@ -64,4 +63,6 @@ router.delete('/hotels/:id', async(req,res)=>{
     res.status(500).json({error:"internal server erroro"})
   }
 })
+
+module.exports=router;
 

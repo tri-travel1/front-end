@@ -5,8 +5,7 @@ const router = express.Router();
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-router.use(bodyParser.json());
-
+router.use(express.json()); 
 router.post('/cars', async (req, res) => {
   try {
     const carData = req.body; // Get car data from request body

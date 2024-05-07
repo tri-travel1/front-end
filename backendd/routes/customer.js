@@ -3,11 +3,9 @@ const router = express.Router();
 const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
-router.use(bodyParser.json());
+router.use(express.json()); 
 
-// **CRUD Operations for Customers (example)**
 
-// Create a customer (POST request)
 router.post('/customers', async (req, res) => {
   try {
     const customerData = req.body; // Get customer data from request body
@@ -19,7 +17,6 @@ router.post('/customers', async (req, res) => {
   }
 });
 
-// Get a customer by ID (GET request)
 router.get('/customers/:id', async (req, res) => {
   try {
     const customerId = parseInt(req.params.id); // Extract ID from URL parameter
@@ -38,7 +35,6 @@ router.get('/customers/:id', async (req, res) => {
   }
 });
 
-// Update a customer (PUT request)
 router.put('/customers/:id', async (req, res) => {
   try {
     const customerId = parseInt(req.params.id);
@@ -58,7 +54,6 @@ router.put('/customers/:id', async (req, res) => {
   }
 });
 
-// Delete a customer (DELETE request)
 router.delete('/customers/:id', async (req, res) => {
   try {
     const customerId = parseInt(req.params.id);
