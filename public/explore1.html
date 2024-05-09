@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Explore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=
+    Lora:wght@400;500;600&family=Nova+Slim&family=Prata&family
+    =Roboto:wght@400;500&family=Tangerine:wght@400;700&display=swap"
+     rel="stylesheet">
+     <link rel="icon" type="image/png" href="favicon.png" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script&family=Oswald&display=swap"
+          rel="stylesheet"
+        />
+  </head>
+  <body>
+   <aside style=" justify-content: flex-end; padding: 30px; width: 100%; display: flex; height: 50px; color: white; background-color: #514128;">
+    <ul style="gap: 40px;  display: flex; align-items: center; margin:10px 30px; ">
+      <li style="font-family: initial;"> <img src="images/icons8-home-24(1).png" alt=""> </li>
+      <li style="font-family: initial;"><img src="images/login.png" alt=""></li>
+      <li style="font-family: initial;"><img src="images/signup.png" alt=""></li>
+    </ul>
+   </aside>
+    <header>
+   
+    <div class="title-description1">
+      <p> <span>Travel Smarter,Dream Bigger:</span> <br> Your Journey Begins Here.</p>
+  
+    </div>
+
+<div class="country">
+  <h2>Countries:</h2>
+</div>
+  <div class="card-group">
+    <div class="card">
+      <img src="images/ethiofinal.jpg" alt="" style="object-fit:fill;">
+      <div class="layer"></div>
+      <div class="info">
+        <h1>Ethiopia</h1>
+        <p>
+          Addis Ababa
+        </p>
+        <button>Explore</button>
+      </div>
+      </div>
+      <div class="card">
+        <img src="images/uaefinal.jpg" alt="">
+        <div class="layer"></div>
+        <div class="info">
+          <h1>UAE</h1>
+          <p>Abu Dhabi</p>
+          <button>Explore</button>
+        </div>
+        </div> <div class="card">
+          <img src="images/usafinal.jpg" alt="">
+          <div class="layer"></div>
+          <div class="info">
+            <h1>USA</h1>
+            <p>
+              Washington, D.C. </p>
+            <button>Explore</button>
+          </div>
+          </div> <div class="card">
+            <img src="images/italyfinal.jpg" alt="">
+            <div class="layer"></div>
+            <div class="info">
+              <h1>Italy</h1>
+              <p>Rome</p>
+              <button>Explore</button>
+            </div>
+            </div> <div class="card">
+              <img src="images/turkfinal.jpg" alt="">
+              <div class="layer"></div>
+              <div class="info">
+                <h1>Turkey</h1>
+                <p>
+                  Istanbul
+                </p>
+                <button>Explore</button>
+              </div>
+              </div>
+     
+  </div>
+  
+ 
+
+
+  </div>
+
+</header>
+
+<section>
+  
+  <div class="place-title">
+
+    <h2>Hotels:</h2>
+  </div>
+<div class="card-group">
+  <div class="card">
+    <img src="images/italyhotel.webp" alt="">
+    <div class="layer"></div>
+    <div class="info">
+      <h1>Grand Hotel Tremezzo</h1>
+      <p>
+        • 4.7 <span>⭐️⭐️⭐️⭐️⭐️</span>
+(1,406) <br>
+•
+5-star hotel <br>
+• Via Regina, 8, 22016 Tremezzina CO, Italy <br>• +39 0344 42491</p>
+      <button><a href="https://www.grandhoteltremezzo.com/en/">See More</a></button>
+    </div>
+  </div> <div class="card">
+    <img src="images/dubaiiihotel.jpg" alt="" style="object-fit: cover;">
+    <div class="layer"></div>
+    <div class="info">
+      <h1>JW Marriott Marquis Hotel Dubai</h1>
+      <p> •4.6 <span>⭐️⭐️⭐️⭐️⭐️</span>
+        (19,092) <br>
+        •
+        5-star hotel
+        Business Bay • Dubai,United Arab Emirates <br>• +971 4 414 0000
+      </p>
+      <button><a href="https://www.marriott.com/en-us/hotels/dxbjw-jw-marriott-marquis-hotel-dubai/overview/">See More</a></button>
+    </div>
+  </div> <div class="card">
+    <img src="images/sheraton.jpg" alt="">
+    <div class="layer"></div>
+    <div class="info">
+      <h1>Sheraton Addis</h1>
+      <p> • A <span>⭐️⭐️⭐️⭐️⭐️</span> Luxury Collection Hotel, Addis Ababa
+        5 stars <br>
+        • Taitu Street, Addis Ababa <br>
+        • 8.3
+        Very good <br>
+        
+        • 140 reviews
+      </p>
+      <button><a href="https://www.marriott.com/en-us/hotels/addlc-sheraton-addis-a-luxury-collection-hotel-addis-ababa/overview/">See More</a></button>
+    </div>
+  </div> <div class="card">
+    <img src="images/akra.webp" alt="">
+    <div class="layer"></div>
+    <div class="info">
+      <h1>Akra Sorgun</h1>
+      <p>
+        • Akra Sorgun Tui Blue Sensatori <br>
+
+        • Sorgun Mahallesi Ayıgürü Mevkii, <br>
+        • Side / Manavgat / Antalya / TURKEY
+        <br>
+        
+        • Phone:+90 242 756 92 50
+      </p>
+      <button><a href="https://akrahotels.com/en/hotels/akra-sorgun/spa-and-wellbeing/?_gl=1*10wz68l*_up*MQ..&gclid=CjwKCAjwz42xBhB9EiwA48pT716mbdbcB6tr7RP6t4wGAKPCKj4upGBcp_Kmzr6jYq_229cqEDk0DRoCPzAQAvD_BwE">See More</a></button>
+    </div>
+  </div> <div class="card">
+    <img src="images/usahotell.jpg" alt="" style="object-fit: cover;">
+    <div class="layer"></div>
+    <div class="info">
+      <h1>The Langham, New York, Fifth Avenue</h1>
+      <p>
+        4.7<span>⭐️⭐️⭐️⭐️⭐️</span>
+        (1,792) <br>
+        •
+        5-star hotel
+        
+        <br>
+        • Eco-certified
+        400 5th Ave,<br>
+         New York, NY 10018, United States <br>•
+         +1 212-695-4005
+      </p>
+      <button>explore</button>
+    </div>
+  </div>
+  
+</div>
+<div class="place-title">
+
+  <h1>Discover Your destination!!!</h1>
+</div>
+<div class="card-groupp">
+<div class="cardd">
+  
+  <img src="images/bmw.png" alt="" style="background-size: contain; object-fit: contain;">
+  <div class="layer"></div>
+  <div class="info">
+   
+    
+    <button><img src="images/bluebmw.png" alt="" style="width: 100px; height: 100px; object-fit: contain;"> <img src="images/silverbmw-removebg-preview.png" alt="" width="30px" height="30px"> <img src="images/redbmw-removebg-preview.png" alt="" width="30px" height="30px"> </button>
+    
+  </div>
+</div> <div class="cardd">
+  <img src="images/blackw-removebg-preview.png" alt="" style="background-size: contain; object-fit: contain; ">
+  <div class="layer"></div>
+  <div class="info">
+  
+   
+    <button><img src="images/bluew.png" alt="" style="width: 100px; height: 100px; object-fit: contain;"> <img src="images/silverw.png" alt="" width="30px" height="30px"> <img src="images/redw.png" alt="" width="30px" height="50px"></button>
+   
+  </div>
+</div> <div class="cardd">
+  <img src="images/benzz.png" alt="" style="background-size: contain; object-fit: contain;">
+  <div class="layer"></div>
+  <div class="info">
+    
+  
+    <button><img src="images/bluegw-removebg-preview.png" alt="""> <img src="images/silvergw.png" alt=""> <img src="images/redgw-removebg-preview.png" alt="" > </button>
+    
+  </div>
+</div> <div class="cardd">
+  <img src="images/tesla.webp" alt="" style="background-size: contain; object-fit: contain;">
+  <div class="layer"></div>
+  <div class="info">
+    
+    <p>
+     <button><img src="images/bluetesla.png" alt="" > <img src="images/silvertesla-removebg-preview.png" alt="" > <img src="images/redtesla-removebg-preview.png" alt="" > </button>
+     
+    </div>
+</div> <div class="cardd">
+  <img src="images/ferrari.avif" alt="" style="background-size: contain; object-fit: contain;">
+  <div class="layer"></div>
+  <div class="info">
+    
+   
+      <button><img src="images/blueferrari.webp" alt="" > <img src="images/silver ferrari.png" alt="" > <img src="images/redferrari.webp" alt=""> </button>
+     
+  </div>
+</div>
+
+</div>
+
+
+</div>
+</section>
+<div class="hotel">
+ 
+  <div class="hotel-1">
+    <h2>Our Tour Gudiders:</h2>
+  </div>
+<div class="momcard"> 
+                  
+  <div1 class="card1" id="div1">
+   <div class="hoverthingi"><p class="cerdtxt">lorem ispem <br> <a href=""><img src="images/icons8-phone-50.png" alt=""></a>  <br>
+     <a href="google.com"><img src="images/icons8-telegram-50.png" alt=""></a></p>
+ 
+  </div>
+  
+    </div1>
+     
+  <div2 class="card1" id="div2">
+    <div class="hoverthingi"><p class="cerdtxt">lorem ispem <br> <a href=""><img src="images/icons8-phone-50.png" alt=""></a>  <br>
+      <a href="google.com"><img src="images/icons8-telegram-50.png" alt=""></a></p>
+  
+   </div>
+  </div2>
+
+
+  <div3 class="card1" id="div3">
+    <div class="hoverthingi"><p class="cerdtxt">lorem ispem <br> <a href=""><img src="images/icons8-phone-50.png" alt=""></a>  <br>
+      <a href="google.com"><img src="images/icons8-telegram-50.png" alt=""></a></p>
+  
+   </div>
+  </div3>
+
+
+  <div4 class="card1" id="div4">
+    <div class="hoverthingi"><p class="cerdtxt">lorem ispem <br> <a href=""><img src="images/icons8-phone-50.png" alt=""></a>  <br>
+      <a href="google.com"><img src="images/icons8-telegram-50.png" alt=""></a></p>
+  
+   </div>
+  </div4>
+</div>
+<footer>
+  <section class="container">
+    <header>Your almost there</header>
+    <form class="form" action="/customer" method="post"> 
+      <label>Choose your country:</label>
+      <div class="column">
+        <div class="select-box">
+          <select required name="place">
+            <option hidden="">Country</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>Germany</option>
+            <option>Japan</option>
+          </select>
+        </div>
+      <input required="" placeholder="Enter your city" type="text">
+      </div>
+       
+        <div class="input-box address">
+          <label>Choose Your destination:</label>
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden="">Country</option>
+                <option>USA</option>
+                <option>UK</option>
+                <option>Germany</option>
+                <option>Japan</option>
+              </select>
+            </div>
+            
+            
+            </div><br>
+            <label>Choose Your Hotel:</label>
+            <div class="column">
+              <div class="select-box">
+                <select>
+                  <option hidden="">Country</option>
+                  <option>JW Marriott Marquis Hotel Dubai,Dubai</option>
+                  <option>Millennium Plaza Downtown Hotel,Dubai</option>
+                  <option>Grand Hotel Tremezzo,Hotel</option>
+                  <option>Rome Cavalieri, A Waldorf Astoria Hotel,Italy</option>
+                  <option>Akra Sorgun,Turkey</option>
+                
+                  <option>Sheraton Addis,Ethiopia</option>
+                 
+                </select>
+              </div>
+              
+              
+              </div><br>
+              <label>Select Occupacy:</label>
+              <div class="column">
+                <div class="select-box">
+                  <select>
+                    <option hidden="">Number of Rooms:</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                   
+                  </select>
+                </div>
+                
+                
+                </div>
+              <div class="column">
+                <div class="input-box">
+                   <div class="column">
+                    <div class="select-box">
+                      <select>
+                        <option hidden="">Adults</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                    
+                    
+                    </div> </div> <br>
+                <div class="input-box">
+                <div class="column">
+                    <div class="select-box">
+                      <select>
+                        <option hidden="">Children</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
+                    
+                    
+                    </div> </div>
+            </div>
+         
+             <br>
+             <div class="column">
+              <div class="input-box">
+                <label>Choose Your Vechile:</label>
+                <div class="column">
+                  <div class="select-box">
+                    <select>
+                      <option hidden="">Vechile</option>
+                      <option>USA</option>
+                      <option>UK</option>
+                      <option>Germany</option>
+                      <option>Japan</option>
+                    </select>
+                  </div>
+                  
+                  
+                  </div> </div> <br>
+              <div class="input-box">
+                <label>Select Your Tour Guider:</label><div class="column">
+                  <div class="select-box">
+                    <select>
+                      <option hidden="">Tour Gudider:</option>
+                      <option>USA</option>
+                      <option>UK</option>
+                      <option>Germany</option>
+                      <option>Japan</option>
+                    </select>
+                  </div>
+                  
+                  
+                  </div> </div>
+          </div>
+        
+        <div class="column">
+          <div class="input-box">
+            <label>Arrival:</label>
+            <input required="" name="" placeholder="Enter phone number" type="date">
+          
+          </div> <br>
+          <div class="input-box">
+            <label>Departure:</label>
+            <input required="" placeholder="Enter birth date" type="date">
+          </div>
+      </div>
+      <div class="btns">
+        
+        <button type="reset">Reset</button>
+        <button>Submit</button>
+      </div>
+    </form>
+  </section>
+</footer>
+ 
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
