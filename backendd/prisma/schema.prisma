@@ -21,13 +21,13 @@ model Customer {
   phone_number String
   Booking      Booking[]
 }
-
+  
 model Car {
   id          Int     @id @default(autoincrement())
   name        String
   type        String
   capacity    Int
-  daily_price Decimal @default(0.00)
+  daily_price Decimal
   image_url   String
 
   Booking Booking[]
@@ -38,7 +38,7 @@ model Hotel {
   name          String
   star_rating   Int
   location      String
-  nightly_price Decimal   @default(0.00)
+  nightly_price Decimal  
   image_url     String
   Booking       Booking[]
 }
@@ -48,17 +48,18 @@ model TourGuide {
   name         String
   languages    String
   specialties  String
-  daily_rate   Decimal   @default(0.00)
+  daily_price  Decimal  
   availability Boolean
   image_url    String
   Booking      Booking[]
 }
 
 model Site {
-  id        Int    @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   name      String
   country   String
   image_url String
+  Booking   Booking[]
 }
 
 model Booking {
@@ -71,13 +72,13 @@ model Booking {
   hotelid     Int       @unique
   TourGuide   TourGuide @relation(fields: [TourGuideid], references: [id])
   TourGuideid Int       @unique
-  country     String
-  city        String
-  destination String
+  site        Site      @relation(fields: [siteid], references: [id])
+  siteid      Int
+  destination String?
   num_rooms   Int
   adults      Int
   children    Int
   start_date  DateTime
   end_date    DateTime
-  total_price Decimal   @default(0.00)
+  total_price Decimal  
 }
