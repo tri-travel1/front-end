@@ -1,12 +1,10 @@
 const express =require('express');
 const router = express.Router();
 const { PrismaClient } = require('@prisma/client');
-
 const prisma = new PrismaClient();
-router.use(express.json()); 
 
-
-router.post('/customers', async (req, res) => {
+router.post('/', async (req, res) => {
+  console.log("message", req.body)
   try {
     const customerData = req.body; // Get customer data from request body
     const customer = await prisma.customer.create({ data: customerData });
@@ -27,6 +25,7 @@ router.get('/customers/:id', async (req, res) => {
     if (customer) {
       res.json(customer);
     } else {
+      console.log("hi");
       res.status(404).json({ error: "Customer not found" }); // Handle not found cases
     }
   } catch (error) {

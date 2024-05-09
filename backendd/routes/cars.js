@@ -6,7 +6,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 router.use(express.json()); 
-router.post('/cars', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const carData = req.body; // Get car data from request body
     const car = await prisma.car.create({ data: carData });
@@ -17,7 +17,7 @@ router.post('/cars', async (req, res) => {
   }
 });
 
-router.get('/cars/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const carId = parseInt(req.params.id); // Extract ID from URL parameter
     const car = await prisma.car.findUnique({ where: { id: carId } });
@@ -32,7 +32,7 @@ router.get('/cars/:id', async (req, res) => {
   }
 });
 
-router.put('/cars/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const carId = parseInt(req.params.id);
     const updateData = req.body; // Get update data from request body
@@ -51,7 +51,7 @@ router.put('/cars/:id', async (req, res) => {
   }
 });
 
-router.delete('/cars/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const carId = parseInt(req.params.id);
     await prisma.car.delete({ where: { id: carId } });

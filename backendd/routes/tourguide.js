@@ -5,7 +5,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 router.use(express.json()); 
-router.get('/api/v1/guides', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const guides = await prisma.guide.findMany();
     res.json(guides);
@@ -15,7 +15,7 @@ router.get('/api/v1/guides', async (req, res) => {
   }
 });
 
-router.get('/api/v1/guides/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const guide = await prisma.guide.findUnique({
@@ -32,7 +32,7 @@ router.get('/api/v1/guides/:id', async (req, res) => {
 });
 
 
-router.put('/api/v1/guides/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const updatedGuide = await prisma.guide.update({
@@ -51,7 +51,7 @@ router.put('/api/v1/guides/:id', async (req, res) => {
 
 
 
-router.delete('/api/v1/guides/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedGuide = await prisma.guide.delete({

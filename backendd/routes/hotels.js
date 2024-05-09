@@ -5,7 +5,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 router.use(express.json()); 
-router.post('/hostels',async(req,res)=>{
+router.post('/',async(req,res)=>{
   try {
     const hotelData = req.body;
     const hotel  = await prisma.Hotel.create({data:hotelData});
@@ -17,7 +17,7 @@ router.post('/hostels',async(req,res)=>{
   }
 });
 
-router.get('/hotels/:id' , async(req,res)=>{
+router.get('/:id' , async(req,res)=>{
   try {
     const hotelId = parseInt(req.params.id);
     const hotel = await prisma.Hotel.findUnique({where:{id:hotelId}});
@@ -33,11 +33,11 @@ router.get('/hotels/:id' , async(req,res)=>{
   }
 });
 
-router.put('/hotels/:id',async(req,res)=>{
+router.put('/:id',async(req,res)=>{
   try {
      const hotelId=parseInt(req.params.id);
      const updateData = req.body;
-     const updatedHoteldata = await prisma .Hotel.update({
+     const updatedHoteldata = await prisma.hotel.update({
       where:{id:hotelId},
       data:updateData,
      });
@@ -53,7 +53,7 @@ router.put('/hotels/:id',async(req,res)=>{
   }
 });
 
-router.delete('/hotels/:id', async(req,res)=>{
+router.delete('/:id', async(req,res)=>{
   try {
     const hotelId = parseInt(req.params.id);
     await prisma.Hotel.delete({where:{id:hotelId}});
