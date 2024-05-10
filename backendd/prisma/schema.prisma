@@ -15,8 +15,8 @@ datasource db {
 
 model Customer {
   id           Int       @id @default(autoincrement())
-  name         String    @unique
-  email        String    @unique
+  name         String   
+  email        String   
   password     String
   phone_number String
   Booking      Booking[]
@@ -28,7 +28,7 @@ model Car {
   type        String
   capacity    Int
   daily_price Decimal
-  image_url   String
+  image_url   String?
 
   Booking Booking[]
 }
@@ -67,11 +67,11 @@ model Booking {
   customer    Customer  @relation(fields: [customerId], references: [id])
   customerId  Int
   car         Car       @relation(fields: [Carid], references: [id])
-  Carid       Int       @unique
+  Carid       Int       
   hotel       Hotel     @relation(fields: [hotelid], references: [id])
-  hotelid     Int       @unique
+  hotelid     Int       
   TourGuide   TourGuide @relation(fields: [TourGuideid], references: [id])
-  TourGuideid Int       @unique
+  TourGuideid Int       
   site        Site      @relation(fields: [siteid], references: [id])
   siteid      Int
   destination String?
