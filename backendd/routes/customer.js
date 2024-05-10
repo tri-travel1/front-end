@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.get('/customers/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const customerId = parseInt(req.params.id); // Extract ID from URL parameter
     const customer = await prisma.customer.findUnique({
@@ -34,7 +34,7 @@ router.get('/customers/:id', async (req, res) => {
   }
 });
 
-router.put('/customers/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const customerId = parseInt(req.params.id);
     const updateData = req.body; // Get update data from request body
@@ -53,7 +53,7 @@ router.put('/customers/:id', async (req, res) => {
   }
 });
 
-router.delete('/customers/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const customerId = parseInt(req.params.id);
     await prisma.customer.delete({ where: { id: customerId } });

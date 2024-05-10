@@ -1,12 +1,12 @@
 const { PrismaClient } = require('@prisma/client');
 
-let db;
+// let db;
 
-if (!global._db) {
-  db = new PrismaClient();
-  global._db = db;
-} else {
-  db = global._db;
-}
+// if (!global._db) {
+  const db = new PrismaClient();
+  // global._db = db;
+// } else {
+  // db = global._db;
+// }
 
 module.exports = db;
