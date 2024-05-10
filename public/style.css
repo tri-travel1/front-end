@@ -575,7 +575,7 @@ color: #000;
         border: none;
         color: #808080;
         font-size: 1rem;
-        background: rgb(208, 233, 248);
+        /* background: rgb(208, 233, 248); */
       }
       
       .form button {

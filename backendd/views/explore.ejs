@@ -111,11 +111,7 @@
   <div class="place-title">
 
     <h2>Hotels:</h2>
-    <% sites.forEach(function(mascot) { %>
-      <li>
-        <strong><%= mascot.name %></strong>
-      </li>
-    <% }); %>
+
   </div>
 <div class="card-group">
   <div class="card">
@@ -297,154 +293,102 @@
 <footer>
   <section class="container">
     <header>Your almost there</header>
-    <form class="form" action="/customer" method="post"> 
-      <label>Choose your country:</label>
+<form class="form" action="/booking" method="post"> 
+  <div class="column">
+    <label>Choose Your destination:</label>
+    <div class="select-box">
+      <select required name="destination">
+        <option hidden="">Destination</option>
+        <% for (const site of sites) { %>
+          <option value="<%= site.id %>"><%= site.name %></option>
+        <% } %>
+      </select>
+    </div>
+  </div><br>
+
+  <div class="column">
+    <label>Choose Your Hotel:</label>
+    <div class="select-box">
+      <select required name="hotelid">
+        <option hidden="">Hotel</option>
+        <% for (const hotel of hotels) { %>
+          <option value="<%= hotel.id %>"><%= hotel.name %></option>
+        <% } %>
+      </select>
+    </div>
+  </div><br>
+
+  <div class="column">
+    <label>Select Your Tour Guider:</label>
+    <div class="select-box">
+      <select name="TourGuideid">
+        <option hidden="">Tour Guider (Optional)</option>
+        <% for (const guide of tourguides) { %>
+          <option value="<%= guide.id %>"><%= guide.name %></option>
+        <% } %>
+      </select>
+    </div>
+  </div><br>
+
+  <label>Select Occupacy:</label>
+  <div class="column">
+    <div class="input-box">
       <div class="column">
         <div class="select-box">
-          <select required name="place">
-            <option hidden="">Country</option>
-            <option>USA</option>
-            <option>UK</option>
-            <option>Germany</option>
-            <option>Japan</option>
+          <select required name="num_rooms">
+            <option hidden="">Number of Rooms:</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
           </select>
         </div>
-      <input required="" placeholder="Enter your city" type="text">
       </div>
-       
-        <div class="input-box address">
-          <label>Choose Your destination:</label>
+    </div><br>
+    <div class="input-box">
+      <div class="column">
+        <div class="select-box">
+          <select required name="adults">
+            <option hidden="">Adults</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+      <div class="column">
+        <div class="input-box">
           <div class="column">
             <div class="select-box">
-              <select>
-                <option hidden="">Country</option>
-                <option>USA</option>
-                <option>UK</option>
-                <option>Germany</option>
-                <option>Japan</option>
+              <select name="children">
+                <option hidden="">Children</option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
               </select>
             </div>
-            
-            
-            </div><br>
-            <label>Choose Your Hotel:</label>
-            <div class="column">
-              <div class="select-box">
-                <select>
-                  <option hidden="">Country</option>
-                  <option>JW Marriott Marquis Hotel Dubai,Dubai</option>
-                  <option>Millennium Plaza Downtown Hotel,Dubai</option>
-                  <option>Grand Hotel Tremezzo,Hotel</option>
-                  <option>Rome Cavalieri, A Waldorf Astoria Hotel,Italy</option>
-                  <option>Akra Sorgun,Turkey</option>
-                
-                  <option>Sheraton Addis,Ethiopia</option>
-                 
-                </select>
-              </div>
-              
-              
-              </div><br>
-              <label>Select Occupacy:</label>
-              <div class="column">
-                <div class="select-box">
-                  <select>
-                    <option hidden="">Number of Rooms:</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                   
-                  </select>
-                </div>
-                
-                
-                </div>
-              <div class="column">
-                <div class="input-box">
-                   <div class="column">
-                    <div class="select-box">
-                      <select>
-                        <option hidden="">Adults</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
-                    
-                    
-                    </div> </div> <br>
-                <div class="input-box">
-                <div class="column">
-                    <div class="select-box">
-                      <select>
-                        <option hidden="">Children</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                      </select>
-                    </div>
-                    
-                    
-                    </div> </div>
-            </div>
-         
-             <br>
-             <div class="column">
-              <div class="input-box">
-                <label>Choose Your Vechile:</label>
-                <div class="column">
-                  <div class="select-box">
-                    <select>
-                      <option hidden="">Vechile</option>
-                      <option>USA</option>
-                      <option>UK</option>
-                      <option>Germany</option>
-                      <option>Japan</option>
-                    </select>
-                  </div>
-                  
-                  
-                  </div> </div> <br>
-              <div class="input-box">
-                <label>Select Your Tour Guider:</label><div class="column">
-                  <div class="select-box">
-                    <select>
-                      <option hidden="">Tour Gudider:</option>
-                      <option>USA</option>
-                      <option>UK</option>
-                      <option>Germany</option>
-                      <option>Japan</option>
-                    </select>
-                  </div>
-                  
-                  
-                  </div> </div>
           </div>
-        
-        <div class="column">
-          <div class="input-box">
-            <label>Arrival:</label>
-            <input required="" name="" placeholder="Enter phone number" type="date">
-          
-          </div> <br>
-          <div class="input-box">
-            <label>Departure:</label>
-            <input required="" placeholder="Enter birth date" type="date">
-          </div>
+        </div>
       </div>
-      <div class="btns">
-        
-        <button type="reset">Reset</button>
-        <button>Submit</button>
-      </div>
-    </form>
-  </section>
-</footer>
- 
-    <script src="scripts/script.js"></script>
-  </body>
-</html>
+    </div>
+  </div><br>
+
+  <div class="column">
+    <div class="input-box">
+      <label>Arrival:</label>
+      <input required="" name="start_date" type="date">
+    </div> <br>
+    <div class="input-box">
+      <label>Departure:</label>
+      <input required="" name="end_date" type="date">
+    </div>
+  </div>
+  <div class="btns">
+    <button type="reset">Reset</button>
+    <button>Submit</button>
+  </div>
+</form>

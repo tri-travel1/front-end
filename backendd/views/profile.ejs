@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+  font-family: 'Segoe UI',Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #8b8686;
+
+}
+.dub{
+display: flex;
+justify-content: center;
+gap: 20px;
+
+}
+
+.booking {
+  border: 1px solid #f5b8b8;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 15px;
+  margin-bottom: 15px;
+
+}
+
+.title {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #808080;
+  text-transform: uppercase;
+}
+
+.booking h3 {
+  font-size: 13px;
+  margin: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 15px 0;
+}
+
+  </style>
+</head>
+<body>
+
+  <% for (const booking of bookings) { %>
+    <div class="booking"> 
+      <div class="dub">
+        <div class="sub">
+          <p class="title">Tour Guide</p> 
+        </div>
+        <div class="sub">
+         <p class="sub"><%= booking.TourGuide.name %></h3>
+        </div>
+
+        <div class="sub">
+          <p class="title">Car</p>
+        </div>
+
+        <div class="sub">
+           <p class="sub"><%= booking.car.name %></p>
+        </div>
+        <div class="sub">
+         <p class="title">Site</p> 
+        </div>
+        <div class="sub">
+          <p class="sub"><%= booking.site.name %></p>
+        </div>
+        </div>
+    </div>
+  <% } %>
+  
+  
+</body>
+</html>
